@@ -2,7 +2,7 @@
 
 ---
 
-readme.txt - компиляция и запуск OpenMP версии программы (task1.c)
+readme.txt - компиляция и запуск OpenMP версии программы (main.c)
 
 readme2.txt - компиляция и запуск MPI версии программы (task2.cpp)
 
