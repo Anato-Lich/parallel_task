@@ -1,0 +1,7 @@
+#BSUB -x
+#BSUB -n 20
+#BSUB -W 00:30
+#BSUB -o "mpi_omp.%J.out"
+#BSUB -e "mpi_omp.%J.err"
+#BSUB -R "affinity[core(1)]"
+OMP_NUM_THREADS=8 mpiexec ./mpi_omp 1 1 1 512
