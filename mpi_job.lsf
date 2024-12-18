@@ -1,0 +1,7 @@
+#BSUB -x
+#BSUB -n 2
+#BSUB -W 00:30
+#BSUB -o "mpi.%J.out"
+#BSUB -e "mpi.%J.err"
+#BSUB -R "affinity[core(1)]"
+mpiexec ./mpi 1 1 1 128
