@@ -1,0 +1,6 @@
+#BSUB -n 1 -q normal
+#BSUB -W 00:5
+#BSUB -o "gpu.%J.out"
+#BSUB -e "gpu.%J.err"
+#BSUB -gpu "num=1:mode=shared"
+mpirun -np 1 ./gpu_task 1 1 1 512
