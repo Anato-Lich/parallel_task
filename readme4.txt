@@ -1,10 +1,5 @@
-module load SpectrumMPI
+module unload SpectrumMPI
+module load openmpi
+module load pgi
 
-make
-
-mpisubmit.pl -p 1 -g 2 program -- 1 1 1 128
-mpisubmit.pl -p 2 -g 1 program -- 1 1 1 128
-
-или
-
-launch.sh
+bsub < acc_job.lsf
