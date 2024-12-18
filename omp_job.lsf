@@ -1,0 +1,7 @@
+#BSUB -x
+#BSUB -n 20
+#BSUB -W 00:15
+#BSUB -o "omp.%J.out"
+#BSUB -e "omp.%J.err"
+#BSUB -R "span[hosts=1]"
+OMP_NUM_THREADS=160 ./omp 1 1 1 512
